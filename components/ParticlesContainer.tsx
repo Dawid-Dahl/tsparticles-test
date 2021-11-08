@@ -43,11 +43,17 @@ const ParticlesContainer = (props: Props) => {
 								enable: true,
 								mode: "push",
 							},
+							onDiv: {
+								selectors: "#repulse-div",
+								mode: "repulse",
+							},
 							onHover: {
 								enable: true,
 								mode: "repulse",
+								parallax: {
+									force: 60,
+								},
 							},
-							resize: true,
 						},
 						modes: {
 							bubble: {
@@ -56,12 +62,12 @@ const ParticlesContainer = (props: Props) => {
 								opacity: 0.8,
 								size: 40,
 							},
-							push: {
-								quantity: 1,
+							grab: {
+								distance: 400,
 							},
-							repulse: {
-								distance: 100,
-								duration: 0.1,
+							slow: {
+								factor: 1,
+								radius: 0,
 							},
 						},
 					},
